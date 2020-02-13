@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Tangerine&display=swap");
+
+:root {
+  --main-color: #b6169b;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #201f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#main {
+  width: 80%;
+  position: relative;
+  box-shadow: 3px 3px 20px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+#img-div {
+  position: relative;
+  width: 50%;
+  box-shadow: 3px 3px 20px 10px rgba(0, 0, 0, 0.3);
+}
+
+#image {
+  max-width: 100%;
+  display: block;
+}
+
+#img-caption {
+  position: absolute;
+  bottom: 0px;
+  color: #fff;
+  font-family: "Tangerine", cursive;
+  font-size: 42px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+#info {
+  width: 48%;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+h1 {
+  color: var(--main-color);
+  font-family: "Tangerine", cursive;
+  font-weight: 500;
+  margin: 10px 0;
+  font-size: 55px;
+}
+
+h2 {
+  color: var(--main-color);
+  font-family: "Tangerine", cursive;
+  font-weight: 300;
+  font-size: 30px;
+  margin: 10px 0 20px 0;
+}
+
+#tribute-info {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Kalam", cursive;
+  font-weight: 200;
+}
+
+hr {
+  border-color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-family: "Tangerine", cursive;
+  font-size: 30px;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 1100px) {
+  #img-caption {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+  #tribute-info {
+    max-height: 160px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #main {
+    display: block;
+    width: 60%;
+  }
+
+  #img-div {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  #img-caption {
+    font-size: 40px;
+  }
+
+  #info {
+    width: initial;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 35px;
+  }
+
+  #img-caption {
+    font-size: 30px;
+  }
+
+  #tribute-info {
+    overflow-y: scroll;
+  }
+
+  #tribute-info::-webkit-scrollbar {
+    display: none;
+  }
+}
