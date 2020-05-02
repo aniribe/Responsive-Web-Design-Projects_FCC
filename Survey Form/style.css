@@ -1,0 +1,447 @@
+:root {
+  --background-color-light: #e4e3e3;
+  --background-color-dark: #333333;
+  --main-font-color: #7c7c7c;
+  --blue-color: #00aff0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  background: var(--background-color-light);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+body.dark {
+  background: var(--background-color-dark);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+#header {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+#modeBtn {
+  margin-left: 40px;
+}
+
+h1 {
+  color: var(--blue-color);
+}
+
+header p {
+  color: var(--main-font-color);
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/*Main Card
+************/
+
+#card {
+  display: flex;
+  background: var(--background-color-light);
+  width: 60%;
+  height: 350px;
+  overflow: hidden;
+  padding: 35px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: var(--main-font-color);
+}
+
+body.dark #card {
+  background: var(--background-color-dark);
+}
+
+/*Left side
+************/
+
+#left-side {
+  display: flex;
+  align-items: center;
+  width: 30%;
+  text-align: right;
+  padding: 20px 30px 20px 15px;
+  font-size: 18px;
+}
+
+#left-side li {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+#left-side li:hover,
+#left-side li.active {
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+/*Border line
+************/
+
+#border {
+  position: relative;
+  width: 2px;
+  background: rgb(187, 186, 186);
+}
+
+#line {
+  position: absolute;
+  width: 5px;
+  height: 50px;
+  background: var(--blue-color);
+  left: -2px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.35);
+  transition: all 0.5s ease-in-out;
+}
+
+#border .one {
+  top: 11%;
+}
+
+#border .two {
+  top: 28%;
+}
+
+#border .three {
+  top: 46%;
+}
+
+#border .four {
+  top: 63%;
+}
+
+/*Right side
+************/
+
+#right-side {
+  position: relative;
+  width: 80%;
+  padding: 20px 40px;
+  overflow: scroll;
+}
+
+#right-side::-webkit-scrollbar {
+  display: none;
+}
+
+/*Section
+************/
+section {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  top: -170%;
+  transition: all 0.5s ease-in-out;
+}
+
+section.active {
+  top: 20px;
+  width: 90%;
+}
+
+/*Element group
+************/
+.form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-group p {
+  margin-bottom: 0;
+  color: var(--blue-color);
+  font-size: 18px;
+}
+
+/*Ordinary input and select element
+************/
+
+.form-group .field,
+.form-group .my-select {
+  width: 280px;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: var(--main-font-color);
+  border-bottom: 1px solid #bdbdbd;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group .field:focus,
+.form-group .my-select:focus {
+  border-bottom-color: var(--blue-color);
+}
+
+/*Ordinary input
+************/
+
+.form-group .field {
+  text-indent: 70px;
+}
+
+.form-group .field:focus {
+  text-indent: 0;
+}
+
+.field::-webkit-input-placeholder,
+.field::-webkit-input-placeholder {
+  color: var(--background-color-light);
+}
+
+.field:focus::-webkit-input-placeholder,
+.field:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+body.dark .field::-webkit-input-placeholder,
+body.dark .field::-webkit-input-placeholder {
+  color: var(--background-color-dark);
+}
+
+body.dark .field:focus::-webkit-input-placeholder,
+body.dark .field:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.form-group .field + label {
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  padding: 5px 15px 3px 15px;
+  color: var(--blue-color);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group .field + label::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -3px;
+  border: 3px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.field:focus + label,
+.field:active + label {
+  color: #fff;
+  background: var(--blue-color);
+  transform: translateY(-30px);
+}
+
+.field:focus + label::after,
+.field:active + label::after {
+  border-top: 5px solid var(--blue-color);
+}
+
+/*select element
+************/
+
+.form-group .my-select option {
+  background-color: rgb(228, 227, 227);
+}
+
+/*Radio buttons
+************/
+
+.form-group input[type="radio"] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+  background-color: hsla(0, 0%, 23%, 0.2);
+  background-image: -webkit-radial-gradient(
+    hsla(200, 100%, 90%, 1) 0%,
+    #00aff0 15%,
+    hsla(214, 100%, 60%, 0.3) 28%,
+    hsla(241, 96%, 30%, 0) 70%
+  );
+  background-repeat: no-repeat;
+  -webkit-transition: background-position 0.15s cubic-bezier(0.8, 0, 1, 1),
+    -webkit-transform 0.25s cubic-bezier(0.8, 0, 1, 1);
+  box-shadow: 0 0 0 1px rgba(167, 166, 166, 0.5),
+    inset 0 0px 1px rgba(138, 138, 138, 0.5);
+}
+
+body.dark .form-group input[type="radio"] {
+  background-color: hsla(0, 0%, 3%, 0.2);
+  box-shadow: 0 0 0 1px rgba(34, 34, 34, 0.5),
+    inset 1px 1px 1px rgba(32, 32, 32, 0.7);
+}
+
+.radio-group input:checked {
+  -webkit-transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1),
+    -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.radio-group input:active,
+.form-group .checkbox-group input:active {
+  -webkit-transform: scale(1.5);
+  -webkit-transition: -webkit-transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-group input[type="radio"],
+.form-group input[type="radio"]:active {
+  background-position: 0 24px;
+}
+.form-group input:checked {
+  background-position: 0 0;
+}
+.form-group input:checked ~ input,
+.form-group input:checked ~ input:active {
+  background-position: 0 -24px;
+}
+
+.radio-group {
+  position: relative;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  position: absolute;
+  top: calc(50% - 8px);
+  font-size: 16px;
+}
+
+/*Checkbox buttons
+************/
+.checkbox-group {
+  position: relative;
+  margin-top: 10px;
+}
+
+.form-group input[type="checkbox"] {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--blue-color);
+  background: transparent;
+  outline: none;
+  margin-right: 10px;
+  transition: background 0.5s ease-in-out;
+}
+
+.form-group input[type="checkbox"]:checked {
+  background: var(--blue-color);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox-group label {
+  position: absolute;
+  top: calc(50% - 9px);
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkbox-group input:checked ~ label {
+  top: calc(10% - 7px);
+  background: #00aff0;
+  padding: 10px;
+  border-radius: 15px;
+  color: rgb(221, 220, 220);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/*Textarea element
+************/
+
+#comment-section textarea {
+  width: 90%;
+  padding: 10px;
+  color: var(--main-font-color);
+  margin-top: 15px;
+  outline: none;
+  resize: none;
+  background: transparent;
+  border-color: var(--blue-color);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*Submit button
+************/
+
+button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 6px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: linear-gradient(0deg, #d3d2d2, #ebe9e9);
+  box-shadow: 0px 6px 7px rgba(92, 92, 92, 0.2),
+    0px -2px 20px rgba(83, 83, 83, 0.15);
+}
+
+body.dark button {
+  background: linear-gradient(0deg, #2c2c2c, #3a3a3a);
+  box-shadow: 0px 6px 7px rgba(24, 24, 24, 0.5),
+    0px -2px 20px rgba(26, 26, 26, 0.15);
+}
+
+button .fas {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: calc(60px - 12px);
+  color: var(--main-font-color);
+  background: linear-gradient(0deg, #ebe9e9, #d3d2d2);
+}
+
+body.dark button .fas {
+  background: linear-gradient(0deg, #3a3a3a, #2c2c2c);
+}
+
+button:hover {
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1), 0px -2px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover .fas {
+  color: var(--blue-color);
+}
+
+@media screen and (max-width: 1200px) {
+  #border .one {
+    top: 8%;
+  }
+
+  #border .two {
+    top: 32%;
+  }
+
+  #border .three {
+    top: 52%;
+  }
+
+  #border .four {
+    top: 69%;
+  }
+}
