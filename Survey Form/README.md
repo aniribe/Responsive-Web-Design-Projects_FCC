@@ -4,6 +4,8 @@
 
 ![](https://github.com/aniribe/Responsive-Web-Design-Projects_FCC/blob/master/Survey%20Form/images/Screenshot.JPG)
 
+<img src="https://github.com/aniribe/Responsive-Web-Design-Projects_FCC/blob/master/Survey%20Form/images/Screenshot.JPG" width="420">
+
 <h3>Technologies used:</h3>
 <ul>
 <li>HTML5</li>
