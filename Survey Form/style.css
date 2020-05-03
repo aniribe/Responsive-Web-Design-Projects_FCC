@@ -369,6 +369,14 @@ body.dark .form-group input[type="radio"] {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
 }
 
+body.dark .form-group input[type="checkbox"]:checked {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+body.dark .checkbox-group input:checked ~ label {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+}
+
 /*Textarea element
 ************/
 
