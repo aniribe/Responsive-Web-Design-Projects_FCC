@@ -2,6 +2,8 @@
 <p>Part of the chanllenges of 100DaysOfCode.</p>
 <p>A small project for Responsive Web Design Certification in FCC.</p>
 
+![](https://github.com/aniribe/Responsive-Web-Design-Projects_FCC/blob/master/Survey%20Form/images/Screenshot.JPG)
+
 <h3>Technologies used:</h3>
 <ul>
 <li>HTML5</li>
