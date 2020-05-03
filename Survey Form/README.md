@@ -8,8 +8,3 @@
 <li>CSS3</li>
 <li>JavaScript</li>
 </ul>
-
-<video width="420" height="240" controls>
-  <source src="./images/Survey-Form.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
