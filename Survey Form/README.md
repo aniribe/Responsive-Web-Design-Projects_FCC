@@ -2,7 +2,6 @@
 <p>Part of the chanllenges of 100DaysOfCode.</p>
 <p>A small project for Responsive Web Design Certification in FCC.</p>
 
-![](https://github.com/aniribe/Responsive-Web-Design-Projects_FCC/blob/master/Survey%20Form/images/Screenshot.JPG)
 
 <img src="https://github.com/aniribe/Responsive-Web-Design-Projects_FCC/blob/master/Survey%20Form/images/Screenshot.JPG" width="420">
 
